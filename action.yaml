@@ -28,6 +28,13 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  args:
+    - ${{ inputs.text }}
+    - ${{ inputs.bearer-token }}
+    - ${{ inputs.consumer-key }}
+    - ${{ inputs.consumer-secret }}
+    - ${{ inputs.access-token }}
+    - ${{ inputs.access-token-secret }}
 branding:
   icon: edit
   color: blue
