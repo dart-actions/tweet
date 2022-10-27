@@ -1,0 +1,30 @@
+name: "Send Tweet"
+description: "Provide easy tweeting functionality based on the Dart language 🐦"
+author: 'Kato Shinya'
+inputs:
+  text:
+    description: The text to post to twitter.
+  bearer-token:
+    description: >
+      Access token issued by OAuth 2.0 PKCE method.
+      If this access token is not specified, be sure to specify the four tokens of the OAuth 1.0a method as arguments.
+      Also, the scope of the access token must be `tweet.read`, `tweet.write`, `users.read`.
+  consumer-key:
+    description: >
+      Consumer API key, available in the "Keys and tokens"
+      section of your application in the Twitter Developer site.
+  consumer-secret:
+    description: >
+      Consumer API secret key, available in the "Keys and tokens"
+      section of your application in the Twitter Developer site.
+  access-token:
+    description: >
+      Application access token, available in the "Keys and tokens"
+      section of your application in the Twitter Developer site.
+  access-token-secret:
+    description: >
+      Application access token secret, available in the "Keys and tokens"
+      section of your application in the Twitter Developer site.
+runs:
+  using: "docker"
+  image: "Dockerfile"
