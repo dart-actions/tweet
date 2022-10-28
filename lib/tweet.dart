@@ -35,17 +35,17 @@ Future<void> tweet() async {
 }
 
 v2.OAuthTokens? get oauthTokens {
-  if (core.getInput(name: 'consumer_key').isEmpty ||
-      core.getInput(name: 'consumer_secret').isEmpty ||
-      core.getInput(name: 'access_token').isEmpty ||
-      core.getInput(name: 'access_token_secret').isEmpty) {
+  if (core.getInput(name: 'consumer-key').isEmpty ||
+      core.getInput(name: 'consumer-secret').isEmpty ||
+      core.getInput(name: 'access-token').isEmpty ||
+      core.getInput(name: 'access-token-secret').isEmpty) {
     return null;
   }
 
   return v2.OAuthTokens(
-    consumerKey: core.getInput(name: 'consumer_key'),
-    consumerSecret: core.getInput(name: 'consumer_secret'),
-    accessToken: core.getInput(name: 'access_token'),
-    accessTokenSecret: core.getInput(name: 'access_token_secret'),
+    consumerKey: core.getInput(name: 'consumer-key'),
+    consumerSecret: core.getInput(name: 'consumer-secret'),
+    accessToken: core.getInput(name: 'access-token'),
+    accessTokenSecret: core.getInput(name: 'access-token-secret'),
   );
 }
