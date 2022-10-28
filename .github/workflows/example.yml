@@ -7,7 +7,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: dart-actions/tweet@v0.0.4
+      - uses: dart-actions/tweet@v1.0.0
         with:
           text: "This is example."
           consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
