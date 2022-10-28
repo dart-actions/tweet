@@ -21,7 +21,7 @@ Future<void> tweet() async {
 
   try {
     await twitter.tweets.createTweet(
-      text: core.getInput(name: core.getInput(name: 'text')),
+      text: core.getInput(name: 'text'),
     );
   } on TimeoutException catch (e) {
     core.error(message: e.toString());
