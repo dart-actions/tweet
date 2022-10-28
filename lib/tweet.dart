@@ -20,9 +20,13 @@ Future<void> tweet() async {
   );
 
   try {
-    await twitter.tweets.createTweet(
+    final response = await twitter.tweets.createTweet(
       text: core.getInput(name: 'text'),
     );
+
+    final tweetId = response.data.id;
+
+    core.info(message: 'Send a tweet successfully! [tweetId = $tweetId]');
   } on TimeoutException catch (e) {
     core.error(message: e.toString());
   } on v2.UnauthorizedException catch (e) {

@@ -34,7 +34,7 @@ secrets.
 
 ## Workflow Usage
 
-Configure your workflow to use `dart-actions/tweet@v0.0.1`,
+Configure your workflow to use `dart-actions/tweet@v1.0.0`,
 and provide the tweet you want to send as the `status` input.
 
 Provide the authentication keys and tokens for your Twitter app
@@ -53,7 +53,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: dart-actions/tweet@v0.0.1
+      - uses: dart-actions/tweet@v1.0.0
         with:
           text: "Hello, World!"
           consumer-key: ${{ secrets.TWITTER_CONSUMER_KEY }}
@@ -74,7 +74,7 @@ jobs:
   tweet:
     runs-on: ubuntu-latest
     steps:
-      - uses: dart-actions/tweet@v0.0.1
+      - uses: dart-actions/tweet@v1.0.0
         with:
           text: "Hello, World!"
           bearer-token: ${{ secrets.TWITTER_BEARER_TOKEN }}
