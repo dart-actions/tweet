@@ -1,5 +1,9 @@
 # Release Note
 
+## v1.0.1
+
+- Fixed document.
+
 ## v1.0.0
 
 - Release stable version.

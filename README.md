@@ -35,7 +35,7 @@ secrets.
 ## Workflow Usage
 
 Configure your workflow to use `dart-actions/tweet@v1.0.0`,
-and provide the tweet you want to send as the `status` input.
+and provide the tweet you want to send as the `text` input.
 
 Provide the authentication keys and tokens for your Twitter app
 as the `consumer-key`, `consumer-secret`, `access-token`, and
